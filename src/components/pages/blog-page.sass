@@ -1,0 +1,74 @@
+$green: #08785c
+$dark: #333
+$red: #c92123
+.blog-page.loading
+  min-height: calc(100vh - 193px)
+  display: flex
+  justify-content: center
+  align-items: center
+  align-content: center
+.blog-page
+  padding-top: 100px
+  padding-bottom: 50px
+  .blog-page-inner
+    padding: 0 60px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    .article-card
+      flex-basis: calc(33.3333% - 30px)
+      margin-right: 15px
+      margin-top: 15px
+      padding: 20px 10px
+      background-color: #fff
+      box-shadow: 0 2px 25px #aaa
+      h4
+        line-height: 1
+        margin-top: 0
+        font-size: 1.4rem
+      .article-link
+        color: #fff
+        padding: 5px 10px
+        background-color: $green
+        transition: .5s ease
+        i
+          padding-left: 5px
+          transition: .5s ease
+        &:hover
+          background-color: $red
+          padding: 5px 20px
+          i
+            padding-left: 10px
+      &:nth-child(3n)
+        margin-right: 0
+@media (max-width: 1200px)
+  .blog-page
+    .blog-page-inner
+      padding: 0 15px
+@media (max-width: 991px)
+  .blog-page
+    .blog-page-inner
+      .article-card
+        h4
+          font-size: 1.1rem
+        p
+          font-size: .8rem
+@media (max-width: 768px)
+  .blog-page
+    .blog-page-inner
+      .article-card
+        flex-basis: calc(50% - 30px)
+        &:nth-child(3n)
+          margin-right: 15px
+        &:nth-child(2n)
+          margin-right: 0
+@media (max-width: 768px)
+  .blog-page
+    .blog-page-inner
+      .article-card
+        flex-basis: 100%
+        margin-right: 0
+        &:nth-child(3n)
+          margin-right: 0
+        &:nth-child(2n)
+          margin-right: 0

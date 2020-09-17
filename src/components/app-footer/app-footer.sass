@@ -1,0 +1,91 @@
+$green: #08785c
+$dark: #333
+.app-footer
+  display: flex
+  flex-direction: row
+  padding: 15px 60px
+  background-color: $dark
+  .footer-column
+    flex: 1
+    .column-header
+      color: $green
+      font-size: 1.2rem
+      font-weight: 700
+    .column-list
+      padding: 0
+      margin: 0
+      list-style-type: none
+      a
+        margin: 10px 0
+        font-size: .85rem
+        display: block
+        color: #ddd
+        transition: .5s ease
+        &:hover
+          color: #fff
+          font-size: 1rem
+    .phone
+      font-size: 1.1rem
+      font-weight: 600
+      color: #ddd
+      transition: .5s ease
+      &:hover
+        color: #fff
+    .messengers
+      margin-top: 15px
+      a
+        margin-right: 10px
+        i
+          font-size: 1.8rem
+          background-clip: text
+          -webkit-text-fill-color: transparent
+          background-size: 200% 100%
+          background-position: 100%
+          transition: .5s ease
+      .i-whatsapp
+        i
+          background-image: linear-gradient(to right, #25d366, #25d366 50%, #fff 50%)
+        &:hover, &:focus
+          i
+            background-position: 0%
+      .i-viber
+        i
+          background-image: linear-gradient(to right, #675ca8, #675ca8 50%, #fff 50%)
+        &:hover, &:focus
+          i
+            background-position: 0%
+      .i-telegram
+        i
+          background-image: linear-gradient(to right, #0088cc, #0088cc 50%, #fff 50%)
+        &:hover, &:focus
+          i
+            background-position: 0%
+  p, a
+    color: #fff
+.app-footer.loading
+  justify-content: center
+@media (max-width: 1200px)
+  .app-footer
+    padding: 15px
+@media (max-width: 991px)
+  .app-footer
+    .footer-column
+      .column-header
+        font-size: 1rem
+      .column-list
+        a
+          margin: 5px 0
+      .phone
+        font-size: .8rem
+      .messengers
+        a
+          i
+            font-size: 1.4rem
+@media (max-width: 577px)
+  .app-footer
+    flex-direction: column
+    text-align: center
+    .footer-column
+      .messengers
+        a
+          margin-left: 10px

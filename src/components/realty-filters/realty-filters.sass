@@ -1,0 +1,220 @@
+$green: #08785c
+$dark: #333
+.filter-block
+  border-bottom: 1px solid #aaa
+  width: calc(100% - 30px)
+  padding: 15px
+  .filter-header
+    font-size: 1rem
+    margin-top: 0
+    margin-bottom: 10px
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    li
+      margin: 5px 0
+      cursor: pointer
+      transition: .5s ease
+      &:hover
+        padding-left: 10px
+    .item.active
+      &::before
+        content: '\2716'
+        color: $green
+        margin-right: 5px
+  .btn-green
+    box-shadow: none
+.slider-filter
+  .slider
+    position: relative
+    display: none
+    .slider-line
+      width: 100%
+      height: 15px
+      background-color: #aaa
+      border-radius: 7.5px
+    .slider-result-line
+      width: 100%
+      height: 15px
+      background-color: $green
+      border-radius: 7.5px
+      position: absolute
+      left: 0
+      top: 0s
+    .slider-circle
+      position: absolute
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background-color: #333
+      top: -2.5px
+      cursor: pointer
+    .slider-circle.min
+      left: 0
+    .slider-circle.max
+      left: calc(100% - 20px)
+  .rc-slider
+    height: 20px
+    padding: 0
+    .rc-slider-rail
+      width: 100%
+      height: 15px
+      background-color: #aaa
+      border-radius: 7.5px
+    .rc-slider-track
+      height: 15px
+      background-color: $green
+      border-radius: 7.5px
+    .rc-slider-handle
+      width: 20px
+      height: 20px
+      background-color: $dark
+      border: none
+      margin-top: -2.5px
+      outline: none
+      box-shadow: none
+  .price-marker
+    font-weight: 600
+    font-size: .8rem
+    padding: 3px
+    background-color: $green
+    color: #fff
+    border-radius: 5px
+  .price-marker.max
+    float: right
+.filter-block.sidebar
+  text-align: center
+  .btn
+    font-size: 1rem
+    padding: 10px 15px
+  .first-block
+    text-align: left
+    margin-bottom: 20px
+    .textwidget
+      display: flex
+      flex-direction: row
+      img
+        max-width: 80px
+        max-height: 80px
+        border-radius: 50%
+      .text
+        padding-left: 10px
+        p
+          margin-top: 5px
+          margin-bottom: 0
+          font-size: .9rem
+          line-height: 1.1
+  .second-block
+    text-align: center
+    margin-top: 20px
+    p
+      font-size: .8rem
+.filter-block.reset
+  text-align: center
+  .btn
+    font-size: 1rem
+    padding: 10px 15px
+    font-weight: 700
+@media (max-width: 1200px)
+  .filter-block
+    .filter-header
+      font-size: .8rem
+    ul
+      li
+        font-size: .8rem
+  .slider-filter
+    .price-marker
+      font-size: .7rem
+  .btn-filter
+    .btn
+      font-size: .8rem
+  .filter-block.sidebar
+    .btn
+      font-size: .8rem
+      padding: 5px 10px
+    .first-block
+      margin-bottom: 10px
+      .textwidget
+        img
+          max-width: 70px
+          max-height: 70px
+        .text
+          padding-left: 10px
+          p
+            font-size: .8rem
+    .second-block
+      margin-top: 10px
+      p
+        font-size: .7rem
+  .filter-block.reset
+    .btn
+      font-size: .8rem
+      padding: 5px 10px
+@media (max-width: 992px)
+  .filter-block.reset
+    .btn
+      font-size: .7rem
+      padding: 5px
+  .filter-block.sidebar
+    .btn
+      font-size: .8rem
+      padding: 5px 10px
+    .first-block
+      margin-bottom: 10px
+      .textwidget
+        flex-direction: column
+        align-items: center
+        .text
+          padding-left: 0
+          text-align: center
+          p
+            font-size: .7rem
+    .second-block
+      margin-top: 10px
+      p
+        font-size: .7rem
+@media (max-width: 768px)
+  .filters-block
+    display: flex
+    flex-wrap: wrap
+    .filter-block
+      flex-basis: calc(50% - 30px)
+      width: auto
+      &:nth-child(1)
+        order: 1
+      &:nth-child(5)
+        order: 2
+      &:nth-child(2)
+        order: 3
+      &:nth-child(3)
+        order: 4
+      &:nth-child(4)
+        order: 5
+      &:nth-child(6)
+        order: 6
+    .filter-block.reset
+      order: 7
+      flex-basis: 100%
+    .filter-block.sidebar
+      order: 8
+      flex-basis: 100%
+@media (max-width: 577px)
+  .filters-block
+    display: flex
+    flex-wrap: wrap
+    .filter-block
+      flex-basis: calc(100% - 30px)
+      width: auto
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 2
+      &:nth-child(3)
+        order: 3
+      &:nth-child(4)
+        order: 4
+      &:nth-child(5)
+        order: 5
+      &:nth-child(6)
+        order: 6

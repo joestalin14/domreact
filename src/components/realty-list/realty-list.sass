@@ -1,0 +1,41 @@
+.realty-list
+  .realty-list-line
+    padding: 10px
+    background-color: #fff
+    margin-bottom: 30px
+    box-shadow: -10px 2px 25px #aaa
+    display: flex
+    align-items: center
+    .counter
+      font-weight: 700
+      flex-basis: 100px
+    .sort
+      flex-basis: calc(100% - 100px)
+      text-align: right
+      select
+        padding: 5px
+        font-weight: 600
+        border: 1px solid #ccc
+        background-color: #ccc
+  .btn
+    font-weight: 600
+    text-align: center
+    padding: 15px
+    font-size: 1rem
+@media (max-width: 768px)
+  .realty-list
+    .realty-list-line
+      margin-top: 30px
+@media (max-width: 577px)
+  .realty-list
+    .counter
+      font-weight: 500
+      font-size: .8rem
+    .sort
+      flex-basis: calc(100% - 90px)
+      select
+        font-weight: 500
+        font-size: .8rem
+    .btn
+      font-size: .8rem
+      padding: 10px

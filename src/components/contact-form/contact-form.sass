@@ -1,0 +1,92 @@
+$green: #08785c
+$dark: #333
+$red: #c92123
+.form-window
+  position: fixed
+  z-index: 2000
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background-color: rgba(#000, .9)
+  text-align: left
+  form
+    width: 40%
+    min-width: 300px
+    margin: 100px auto
+    background-color: rgba($dark, .95)
+    padding: 15px
+    position: relative
+    text-align: center
+    .author-block
+      display: flex
+      flex-direction: column
+      text-align: center
+      align-items: center
+      img
+        max-width: 110px
+        border-radius: 50%
+      p
+        font-weight: 600
+        font-style: italic
+        margin: 5px 0
+      .name
+        color: #fff
+        font-weight: 800
+        font-style: normal
+    p
+      font-size: 1.2rem
+      font-weight: 800
+      color: $green
+      text-align: center
+      margin-top: 10px
+    .form-group
+      label
+        display: block
+        color: #fff
+        font-size: .9rem
+        margin-bottom: 5px
+        text-align: left
+      input
+        display: block
+        box-sizing: border-box
+        width: 100%
+        border: none
+        padding: 10px 15px
+        margin-bottom: 20px
+        background-color: #eee
+        transition: .5s ease
+        &:hover, &:focus, &:active
+          background-color: #fff
+          padding: 10px 25px
+    button
+      box-shadow: none
+      font-size: 1rem
+      padding: 10px 25px
+      margin-top: 30px
+      &:hover
+        padding: 10px 55px
+        box-shadow: none
+    .close
+      position: absolute
+      right: 10px
+      top: 10px
+      color: $green
+      font-size: 1.8rem
+      cursor: pointer
+      transition: .5s ease
+      &:hover
+        color: $red
+        transform: rotate(90deg)
+  .alert
+    margin-top: 15px
+    color: #fff
+@media (max-width: 577px)
+  .form-window
+    form
+      width: 96%
+      min-width: 1px
+      margin: 50px 2%
+      box-sizing: border-box
+      p
+        font-size: 1rem

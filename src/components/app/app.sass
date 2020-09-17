@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&display=swap')
+$green: #08785c
+$dark: #333
+body, html
+  margin: 0
+  padding: 0
+  max-width: 100%
+  width: 100%
+  position: relative
+  background-color: #f5f5f5
+  #root
+    width: 100%
+    .app
+      width: 100%
+h1, h2, h3
+  font-family: Montserrat
+  font-weight: 900
+  font-size: 2rem
+  color: $dark
+h4, h5, h6
+  font-family: Montserrat
+  font-weight: 700
+  font-size: 1.8rem
+  color: $dark
+button
+  font-family: Montserrat
+  font-weight: 700
+p, div, li, a, span, option, select, label, input
+  font-family: Montserrat
+  font-weight: 400
+  font-size: .9rem
+  color: $dark
+a
+  text-decoration: none
+.btn
+  border: none
+  cursor: pointer
+  transition: .5s ease
+.btn-outline
+  border: 1px solid lighten($dark, 25%)
+  font-weight: 600
+  background-color: transparent
+  color: $dark
+  &:hover
+    background-color: $green
+    border-color: $green
+    color: #fff
+.btn-green
+  background-color: $green
+  color: #fff
+  box-shadow: 0 2px 10px #ccc
+  &:hover
+    background-color: darken($green, 5%)
+    box-shadow: 0 4px 10px #aaa
+.btn-gray
+  background-color: #eee
+  color: #515151
+  box-shadow: 0 2px 10px #ccc
+  &:hover
+    background-color: darken(#eee, 5%)
+    box-shadow: 0 4px 10px #aaa
+.btn-sm
+  font-size: .9rem
+  padding: 5px
+.btn-md
+  font-size: 1.1rem
+  padding: 15px 20px
+.btn-group
+  display: flex
+  flex-direction: row
+  .btn
+    flex: 1 1 auto
+    border-right: none
+    &:last-child
+      border-right: 1px solid lighten($dark, 25%)
+#root
+  margin: 0
+  padding: 0
+  position: relative
+  .app
+    margin: 0
+    padding: 0
+    position: relative
+@media (max-width: 1200px)
+  .btn-md
+    font-size: .9rem
+    padding: 10px 15px
+@media (max-width: 577px)
+  .btn-md
+    font-size: .8rem
+    padding: 5px 7px

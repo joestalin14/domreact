@@ -1,0 +1,194 @@
+$green: #08785c
+$dark: #333
+.realty-object-page.loading
+  min-height: calc(100vh - 193px)
+  display: flex
+  justify-content: center
+  align-items: center
+  align-content: center
+.realty-object-page
+  position: relative
+  float: left
+  box-sizing: border-box
+  width: calc(100% - 120px)
+  margin: 100px 60px
+  margin-bottom: 50px
+  padding: 15px
+  background-color: #fff
+  box-shadow: 0 0 15px rgba(#000, .5)
+  .realty-first-block
+    display: flex
+    .gallery
+      flex-basis: calc(48% - 15px)
+      margin-right: 15px
+      position: relative
+      overflow: hidden
+      img
+        max-width: 100%
+    .description
+      flex-basis: calc(52% - 15px)
+      padding-left: 15px
+      h1
+        font-size: 1.5rem
+        font-weight: 700
+        margin-top: 0
+        color: $green
+      .price
+        font-size: 1.7rem
+      .item-parameters
+        line-height: 1
+        p
+          font-weight: 700
+          margin: 10px 0
+      .btn
+        display: block
+        text-align: center
+        width: 100%
+        margin-top: 30px
+      .author-block
+        display: flex
+        flex-direction: row
+        margin-top: 30px
+        align-items: center
+        .author-img
+          flex-basis: 120px
+          img
+            max-width: 100%
+            border-radius: 50%
+        .author-description
+          padding-left: 30px
+          p
+            font-size: 1.1rem
+            margin: 5px 0
+          .name
+            font-weight: 700
+            font-size: 1.2rem
+            margin-top: 0
+          a
+            margin: 5px 0
+            display: block
+            font-size: 1.1rem
+            font-weight: 700
+            color: $green
+            transition: .5s ease
+            &:hover
+              color: darken($green, 10%)
+  .realty-second-block
+    .description
+      margin: 30px 0
+  .map-video
+    display: flex
+    flex-direction: row
+    .map-inner
+      flex-basis: calc(50% - 30px)
+      margin-right: 15px
+    .video-inner
+      flex-basis: calc(50% - 15px)
+      iframe
+        width: 100%
+        height: 240px
+@media (max-width: 1200px)
+  .realty-object-page
+    width: calc(100% - 30px)
+    margin: 100px 15px
+@media (max-width: 991px)
+  .realty-object-page
+    margin: 60px 15px
+    .realty-first-block
+      .description
+        h1
+          font-size: 1.2rem
+        .price
+          font-size: 1.4rem
+          margin: 10px 0
+        .item-parameters
+          p
+            font-size: .8rem
+            margin: 5px 0
+        .author-block
+          .author-img
+            flex-basis: 80px
+          .author-description
+            p
+              font-size: .9rem
+            .name
+              font-size: .9rem
+            a
+              font-size: .9rem
+    .realty-second-block
+      .description
+        p
+          font-size: .8rem
+@media (max-width: 768px)
+  .realty-object-page
+    .realty-first-block
+      .description
+        h1
+          font-size: 1rem
+        .price
+          font-size: 1.2rem
+          margin: 10px 0
+        .item-parameters
+          p
+            font-size: .7rem
+            margin: 2px 0
+            span
+              font-size: .7rem
+        .btn
+          margin-top: 15px
+        .author-block
+          margin-top: 15px
+          .author-img
+            flex-basis: 70px
+          .author-description
+            padding-left: 15px
+            p
+              font-size: .8rem
+            .name
+              font-size: .8rem
+            a
+              font-size: .8rem
+    .realty-second-block
+      .description
+        p
+          font-size: .7rem
+@media (max-width: 577px)
+  .realty-object-page
+    .realty-first-block
+      flex-direction: column
+      .gallery
+        flex-basis: 100%
+        margin-right: 0
+      .description
+        flex-basis: 100%
+        padding-left: 0
+        margin-top: 15px
+        h1
+          font-size: 1.1rem
+          text-align: center
+        .price
+          font-size: 1.2rem
+          margin: 10px 0
+          text-align: center
+        .item-parameters
+          p
+            font-size: .8rem
+            margin: 2px 0
+            span
+              font-size: .8rem
+              float: right
+        .btn
+          margin-top: 30px
+        .author-block
+          margin-top: 30px
+          .author-img
+            flex-basis: 80px
+    .map-video
+      display: flex
+      flex-direction: column
+      .map-inner
+        flex-basis: 100%
+        margin-right: 0
+      .video-inner
+        flex-basis: 100%
+        margin-top: 30px

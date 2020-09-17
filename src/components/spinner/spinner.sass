@@ -1,0 +1,46 @@
+.spinner
+  text-align: center
+  padding: 20px 10px
+  span
+    font-size: 1rem
+    font-weight: 600
+    position: relative
+    display: inline-block
+    span
+      display: inline-block
+      width: 10px
+      height: 10px
+      background-color: #555
+      border-radius: 50%
+      position: absolute
+    .dot-1
+      padding-left: 0
+      animation: o1 1s linear infinite
+      left: -15px
+    .dot-2
+      padding-left: 0
+      animation: o2 1s linear infinite
+      left: 0
+    .dot-3
+      animation: o1 1s linear infinite
+      left: 15px
+@keyframes o1
+  0%
+    bottom: 0
+    opacity: .5
+  50%
+    bottom: 10px
+    opacity: 1
+  100%
+    bottom: 0
+    opacity: .5
+@keyframes o2
+  0%
+    bottom: 10px
+    opacity: 1
+  50%
+    bottom: 0
+    opacity: .5
+  100%
+    bottom: 10px
+    opacity: 1

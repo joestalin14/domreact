@@ -1,0 +1,271 @@
+$green: #08785c
+$dark: #333
+$red: #c92123
+.app-header.loading
+  align-items: center
+  align-content: center
+  justify-content: center
+.app-header
+  display: flex
+  flex-direction: row
+  position: fixed
+  width: 100%
+  padding: 0 60px
+  box-sizing: border-box
+  background-color: #fff
+  box-shadow: 0 1px 5px #555
+  align-items: center
+  z-index: 100
+  a
+    display: block
+    line-height: 0
+  .app-header-col
+    flex-basis: 25%
+    padding: 5px 0
+  .app-header-col.logo
+    border-right: 1px solid #aaa
+    .app-header-brand
+      img
+        max-width: 150px
+  .app-header-col.nav-btn
+    padding: 0
+    padding-left: 15px
+    flex-basis: calc(25% - 15px)
+    .open-nav-btn
+      border: none
+      background-color: transparent
+      cursor: pointer
+      position: absolute
+      top: 22px
+      .nav-items
+        display: block
+        float: left
+        width: 50px
+        padding-top: 5px
+        .nav-item
+          display: block
+          float: left
+          background-color: #333
+          width: 30px
+          height: 4px
+          margin-bottom: 5px
+          margin-left: 10px
+          transition: .5s ease
+      .nav-text
+        display: block
+        float: left
+        font-weight: 700
+        font-size: 1.2rem
+        transition: .5s ease
+      &:hover
+        .nav-items
+          .nav-item
+            background-color: $green
+            &:first-child
+              margin-left: 15px
+            &:last-child
+              margin-left: 5px
+        .nav-text
+          color: $green
+          padding-left: 10px
+  .app-header-col.phone-number
+    text-align: right
+    .phone
+      font-weight: 700
+      font-size: 1rem
+      transition: .5s ease
+      i
+        font-size: .95rem
+        padding-right: 10px
+      &:hover
+        color: $green
+  .app-header-col.call-btn
+    text-align: right
+.main-nav
+  position: fixed
+  z-index: 101
+  left: -550px
+  top: 0
+  width: 500px
+  height: 100vh
+  background-color: rgba($dark, .95)
+  box-shadow: 5px 0 15px $dark
+  transition: .5s ease
+  .app-header-list
+    display: flex
+    flex-direction: column
+    list-style-type: none
+    padding: 0
+    margin: 0
+    padding-top: 40px
+    li
+      padding-left: 50px
+      padding-top: 10px
+      a
+        font-size: 1.4rem
+        color: #fff
+        font-weight: 600
+        transition: .5s ease
+        &:hover
+          color: $green
+  .widget-call
+    display: flex
+    flex-direction: column
+    margin-top: 50px
+    padding: 0 50px
+    text-align: center
+    align-items: center
+    img
+      max-width: 120px
+      border-radius: 50%
+    p
+      color: #fff
+      font-size: 1.1rem
+      font-weight: 600
+    .phone
+      margin-top: 30px
+      a
+        font-size: 1.4rem
+        color: lighten($green, 10%)
+        font-weight: 700
+        transition: .5s ease
+        &:hover
+          color: lighten($green, 30%)
+    .widget-call-btn
+      .icons
+        i
+          font-size: 2.5rem
+          margin: 0 10px
+          transition: .5s ease
+      .i-viber
+        i
+          color: #675ca8
+        &:hover
+          i
+            color: lighten(#675ca8, 10%)
+      .i-whatsapp
+        i
+          color: #25d366
+        &:hover
+          i
+            color: lighten(#25d366, 10%)
+      .i-telegram
+        i
+          color: #08c
+        &:hover
+          i
+            color: lighten(#08c, 10%)
+  .main-nav-close
+    border: none
+    background-color: transparent
+    position: absolute
+    right: 10px
+    top: 10px
+    color: $green
+    font-size: 1.8rem
+    cursor: pointer
+    transition: .5s ease
+    &:hover
+      color: $red
+      transform: rotate(90deg)
+.main-nav.opened
+  left: 0
+@media (max-width: 1200px)
+  .app-header
+    padding: 0 15px
+    .app-header-col.logo
+      .app-header-brand
+        img
+          max-width: 130px
+    .app-header-col.nav-btn
+      .open-nav-btn
+        top: 20px
+    .app-header-col.phone-number
+      .phone
+        font-size: .8rem
+        i
+          font-size: .75rem
+    .app-header-col.call-btn
+      .btn
+        font-size: .9rem
+        padding: 10px 15px
+@media (max-width: 991px)
+  .app-header
+    .app-header-col.logo
+      .app-header-brand
+        img
+          max-width: 100px
+    .app-header-col.nav-btn
+      .open-nav-btn
+        top: 16px
+        .nav-items
+          width: 45px
+          padding-top: 4px
+          .nav-item
+            width: 25px
+            height: 3px
+        .nav-text
+          font-size: 1rem
+    .app-header-col.phone-number
+      .phone
+        font-size: .7rem
+        i
+          font-size: .65rem
+    .app-header-col.call-btn
+      .btn
+        font-size: .8rem
+        padding: 7px 10px
+@media (max-width: 768px)
+  .app-header
+    .app-header-col.logo
+      border: none
+      .app-header-brand
+        img
+          max-width: 80px
+    .app-header-col.nav-btn
+      .open-nav-btn
+        top: 11px
+        .nav-items
+          width: 40px
+          padding-top: 4px
+          .nav-item
+            width: 20px
+            height: 3px
+        .nav-text
+          font-size: 1rem
+    .app-header-col.call-btn
+      .btn
+        font-size: .7rem
+        padding: 5px
+@media (max-width: 577px)
+  .app-header
+    .app-header-col
+      flex-basis: 50%
+    .app-header-col.logo
+      border: none
+      .app-header-brand
+        img
+          max-width: 80px
+    .app-header-col.nav-btn
+      .open-nav-btn
+        top: 11px
+        right: 15px
+        padding-right: 0
+        .nav-items
+          width: 40px
+          padding-top: 4px
+          .nav-item
+            width: 20px
+            height: 3px
+        .nav-text
+          font-size: 1rem
+    .app-header-col.phone-number
+      display: none
+    .app-header-col.call-btn
+      display: none
+      .btn
+        font-size: .7rem
+        padding: 5px
+  .main-nav
+    width: 100%
+    left: -110%
